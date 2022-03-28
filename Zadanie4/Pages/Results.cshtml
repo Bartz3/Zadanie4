@@ -1,0 +1,44 @@
+﻿@page
+@model Zadanie4.Pages.Shared.ResultsModel
+@{
+    ViewData["Title"] = "Wyniki";
+    Layout = "_Layout";
+}
+
+ <div class="form-group row mt-5 text-center" style="font-weight:bold" >
+<h1>Twoje BMI wynosi: @Model.user.Result</h1>
+@if (Model.user.Result < 18.5) {
+ <div class="text-danger justify-content-center"> Twoje BMI jest zbyt niskie!</div>
+ }
+ else if(Model.user.Result>=18.5 && Model.user.Result<=25) 
+ {
+ <div>Twoje BMI jest w normie!</div>
+ }
+ else if (Model.user.Result > 25) 
+ {
+ <div class="text-danger justify-content-center">Twoje BMI jest za wysokie! </div>
+ }
+ <br /><br />
+<div> Imię: @Model.user.FirstName 
+</div>
+     <br/>
+     <div> Email: @Model.user.Email 
+     </div>
+     <br/>
+     <div> Wiek: @Model.user.Age
+     </div>
+      <br/>
+       <div> Waga: @Model.user.Weight kg </div>
+       <br/>
+     @if(Model.user.HeightUnit=="cm")
+     {
+         <div> Wzrost: @Model.user.Height cm </div>
+     }
+     else
+     {
+         <div> Wzrost: @Model.user.Height m </div>
+     }      
+     <br/>
+     <div> Płeć: @Model.user.Gender </div>
+     <br/>
+     </div>

@@ -1,0 +1,121 @@
+﻿@page
+@model Zadanie4.Pages.Shared.CalculatorModel
+@{
+    ViewData["Title"] = "Kalkulator BMI";
+    Layout = "_Layout";
+}
+
+ <form method="POST">
+ <div class="row text-warning text-black" style="font-weight:bold">
+    <div class="form-group row mt-5">
+            <div class="form-group">
+             <label asp-for="user.FirstName"></label>
+             <input asp-for="user.FirstName" />  
+            <span asp-validation-for="user.FirstName" class="text-danger align-text-bottom"></span>
+            </div>
+            <br /><br />
+            <div class="form-group">
+             <label asp-for="user.Email"></label>
+             <input asp-for="user.Email" />
+            </div>
+            <br /><br />
+             <div class="form-group">
+             <label asp-for="user.Age"></label>
+             <input asp-for="user.Age" /> 
+             <span asp-validation-for="user.Age" class="text-danger justify-content-center"></span>
+            </div>
+            <br /><br />
+             <div class="form-group">
+             <label asp-for="user.Weight"></label>
+             <input asp-for="user.Weight" /> 
+             <span asp-validation-for="user.Weight" class="text-danger justify-content-center"></span>
+            </div>
+            <br /><br />
+             <div class="form-group">
+             <label asp-for="user.Height"></label>
+             <input asp-for="user.Height" /> 
+             <span asp-validation-for="user.Height" class="text-danger justify-content-center"></span>
+            </div>
+            <br /><br />
+             <div >
+             <label asp-for="user.Gender"></label>
+             <select asp-for="user.Gender">
+                 <option value="">-</option>
+                 <option value="Mężczyzna">Mężczyzna</option>
+                 <option value="Kobieta">Kobieta</option>
+             </select>
+            </div>
+            <br /><br />
+             <div>
+           <label asp-for="user.HeightUnit"></label>
+             <select asp-for="user.HeightUnit">
+                 <option value="">-</option>
+                 <option value="cm">cm</option>
+                 <option value="m">m</option>
+             </select>
+            </div>
+            <br /><br />
+              <div class="form-group">
+            <button class="btn btn-primary">Zatwierdź</button>
+            </div>
+    </div>
+</div>
+
+</form>
+     <!-- 
+         <form method="POST">
+     <div class="form-group row mt-5">
+        <h1>Kalkulator BMI</h1>
+        <div>
+             <label asp-for="user.FirstName"></label>
+             <input asp-for="user.FirstName" />  
+            <span asp-validation-for="user.FirstName" class="text-danger justify-content-center"></span>
+        </div>
+        <br/><br />
+        <div> 
+             <label asp-for="user.Email"></label>
+             <input asp-for="user.Email" />
+        </div>
+        <br/><br />
+        <div>
+             <label asp-for="user.Age"></label>
+             <input asp-for="user.Age" /> 
+             <span asp-validation-for="user.Age" class="text-danger justify-content-center"></span>
+        </div>
+        <br/> <br/>
+        <div>
+             <label asp-for="user.Weight"></label>
+             <input asp-for="user.Weight" /> 
+             <span asp-validation-for="user.Weight" class="text-danger justify-content-center"></span>
+        </div>
+        <br/><br/> 
+        <div>
+             <label asp-for="user.Height"></label>
+             <input asp-for="user.Height" /> 
+             <span asp-validation-for="user.Height" class="text-danger justify-content-center"></span>
+        </div>
+        <br /><br />
+         <div> 
+             <label asp-for="user.Gender"></label>
+             <select asp-for="user.Gender">
+                 <option value="">-</option>
+                 <option value="Mężczyzna">Mężczyzna</option>
+                 <option value="Kobieta">Kobieta</option>
+             </select>
+        </div>
+        <br/> <br />
+       <div>
+           <label asp-for="user.HeightUnit"></label>
+             <select asp-for="user.HeightUnit">
+                 <option value="">-</option>
+                 <option value="cm">cm</option>
+                 <option value="m">m</option>
+             </select>
+        </div> 
+        <br /><br />
+         <div class=" text-center justify-content-center">
+        <button class="btn btn-primary">Zatwierdź</button>
+         </div>
+         </div>
+    </form>
+    --> 
