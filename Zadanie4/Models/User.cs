@@ -16,10 +16,10 @@ namespace Zadanie4.Models
         [Display(Name = "Wiek"), Range(1, 120, ErrorMessage = "Podano niepoprawne dane!")]
         public int Age { get; set; }
 
-        [Required(ErrorMessage = "Pole waga nie może być puste!"), Display(Name = "Waga")]
+        [Display(Name = "Waga"),Required(ErrorMessage = "Pole waga nie może być puste!") ]
         public double Weight { get; set; }
 
-        [Required(ErrorMessage = "Pole wzrost nie może być puste"), Display(Name = "Wzrost")]
+        [Display(Name = "Wzrost"),Required(ErrorMessage = "Pole wzrost nie może być puste")]
 
         public double Height { get; set; }
         [Display(Name = "Płeć")]
